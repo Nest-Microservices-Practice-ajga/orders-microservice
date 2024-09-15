@@ -18,7 +18,7 @@ export class CreateOrderDto {
   totalItems: number;
 
   @IsEnum(OrderStatusList, {
-    message: 'Possible status values are ${OrderStatusList}',
+    message: `Possible status values are ${OrderStatusList}`,
   })
   @IsOptional()
   status: OrderStatus = OrderStatus.PENDING;
